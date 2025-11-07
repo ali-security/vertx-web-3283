@@ -60,7 +60,7 @@ jobs:
         working-directory: vertx-web-graphql/tests/apollo
       - run: npm run test
         working-directory: vertx-web-graphql/tests/apollo
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
           name: ApolloTestsServer.log
@@ -91,7 +91,7 @@ jobs:
         working-directory: vertx-web-graphql/tests/graphql-ws
       - run: npm run test
         working-directory: vertx-web-graphql/tests/graphql-ws
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
           name: GraphQLWSTestsServer.log
@@ -122,7 +122,7 @@ jobs:
         working-directory: vertx-web/tests/sockjs
       - run: npm run test
         working-directory: vertx-web/tests/sockjs
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
           name: SockJSWriteHandlerTestServer.log
